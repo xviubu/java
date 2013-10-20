@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+	<servlet>
+		<servlet-name>ListenerTester</servlet-name>
+		<servlet-class>com.example.ListenerTester</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ListenerTester</servlet-name>
+		<url-pattern>/ListenTest.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AttributeTester</servlet-name>
+		<servlet-class>com.example.AttributeTester</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AttributeTester</servlet-name>
+		<url-pattern>/AttributeTest.do</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>breed</param-name>
+		<param-value>Great Dane</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>
+			com.example.MyServletContextListener
+		</listener-class>
+		<listener-class>
+			com.example.AttributeTester
+		</listener-class>
+		<listener-class>
+			com.example.BeerSessionCounter
+		</listener-class>
+		<listener-class>
+			com.example.BeerAttributeListener
+		</listener-class>
+	</listener>
+
+</web-app>

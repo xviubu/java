@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+	<persistence-unit name="spitterPU">
+				<class>com.xviubu.spitter.model.Spitter</class>
+				<class>com.xviubu.spitter.model.Spittle</class>
+				<properties>
+					<property  name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+					<property  name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/spitter" />
+					<property  name="javax.persistence.jdbc.user" value="root"/>
+					<property  name="javax.persistence.jdbc.password" value="ls910801" />
+				</properties>
+	</persistence-unit>
+</persistence>
